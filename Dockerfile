@@ -7,7 +7,7 @@ ENV https_proxy http://9.196.156.29:3128
 RUN yum -y install libstdc++ make gcc-c++ numactl-devel
 
 # XLC runtime support - required by ibm_db node package
-RUN curl -sL http://public.dhe.ibm.com/software/server/POWER/Linux/xl-compiler/eval/ppc64le/rhel7/libm-xl-compiler-eval.repo \
+RUN curl -sL http://public.dhe.ibm.com/software/server/POWER/Linux/xl-compiler/eval/ppc64le/rhel7/ibm-xl-compiler-eval.repo \
         && yum -y install libxlc
         
 #install most up-to-date LTS node for ppc64le
