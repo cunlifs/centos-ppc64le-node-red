@@ -1,5 +1,8 @@
 FROM ppc64le/centos
 
+ENV http_proxy http://9.196.156.29:3128
+ENV https_proxy http://9.196.156.29:3128
+
 # runtime support to enable npm build capabilities
 RUN yum -y install libstdc++ make gcc-c++ numactl-devel
 
@@ -40,6 +43,3 @@ EXPOSE 1880
 ENV FLOWS=flows.json
 
 CMD ["node", "./node_modules/node-red/red.js", "--userDir", "/data"]
-
-ENV http_proxy http://9.196.156.29:3128
-ENV https_proxy http://9.196.156.29:3128
