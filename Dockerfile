@@ -44,4 +44,4 @@ RUN curl -sL http://public.dhe.ibm.com/software/server/POWER/Linux/xl-compiler/e
 #ENV FLOWS=flows.json
 
 #CMD ["node", "./node_modules/node-red/red.js", "--userDir", "/data"]
-RUN sleep 60000
+CMD sleep 60000
